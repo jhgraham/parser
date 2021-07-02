@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Antlr4 Remove="Hello.g4" />
+    <Antlr4 Remove="SqlBase.g4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="HelloBaseListener.cs" />
+    <Compile Remove="HelloBaseVisitor.cs" />
+    <Compile Remove="HelloLexer.cs" />
+    <Compile Remove="HelloListener.cs" />
+    <Compile Remove="HelloParser.cs" />
+    <Compile Remove="HelloVisitor.cs" />
+    <Compile Remove="SqlBaseBaseVisitor.cs" />
+    <Compile Remove="SqlBaseLexer.cs" />
+    <Compile Remove="SqlBaseParser.cs" />
+    <Compile Remove="SqlBaseVisitor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr4.CodeGenerator" Version="4.6.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.9.2" />
+  </ItemGroup>
+
+</Project>
